@@ -1,4 +1,5 @@
 ---
+title: Recent Posts
 layout: homepage
 canonical_url: https://s.kapresoft.com
 redirect_from: 
