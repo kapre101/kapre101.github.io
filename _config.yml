@@ -1,0 +1,70 @@
+info:
+  version: "20230517.01"
+
+theme: jekyll-theme-leap-day
+title: KapreSoft
+name: s.KapreSoft.com
+description: "Thank you for unblocking ads; your support allows us to continue delivering free, high-quality content that truly matters to you."
+layout: kapresoft
+exclude:
+  - "docs/*"
+  - "*.sh"
+  - "*.code-workspace"
+  - "*.gemspec"
+  - "README*.md"
+  - ".idea/*"
+
+# set to "dev" so that analytics and adds won't show
+env: prod
+
+# OLD Analytics Tracking ID (Deprecated)
+# google_analytics: UA-123953282-1
+
+# ----------------
+# Google Analytics (V4)
+ga:
+  enable: false
+  tracking_id: G-1EG60WX50K
+
+show_google_ads: false
+show_banner: false
+
+excerpt_separator: <!--excerpt-->
+
+# ---------------
+# highlighterjs
+#  - no line number supper
+# Themes: https://github.com/highlightjs/highlight.js/tree/main/src/styles
+highlighterjs:
+    default_theme: androidstudio
+
+github:
+    is_project_page: true
+    owner_url: https://kapresoft.com/about-antonio-lagnada.html
+    owner_name: Antonio Lagnada (Author)
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-last-modified-at
+  - jekyll-default-layout
+
+last-modified-at:
+  date-format: '%d-%b-%y %T %z'
+
+# seo-tag
+author:
+  name: Antonio Lagnada
+  twitter: deloy72
+logo: https://cdngh.kapresoft.com/img/kapresoft1-210x-09aaa6e.png
+
+twitter:
+  username: deloy72
+  card: summary
+
+# See:
+#  - https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md
+#  - https://jekyllrb.com/docs/configuration/front-matter-defaults/
+defaults:
+  - values:
+      image: https://cdngh.kapresoft.com/img/kapresoft1-210x-09aaa6e.png

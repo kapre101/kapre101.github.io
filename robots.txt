@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /dev/*
+Disallow: /index.html
+Disallow: /site.html
+Disallow: /?m=0
+Disallow: /search
+Disallow: /feeds/*
+Disallow: /x/*
+
+Sitemap: https://s.kapresoft.com/sitemap.xml

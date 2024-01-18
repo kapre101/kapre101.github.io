@@ -1,0 +1,15 @@
+title: s.KapreSoft (Dev)
+
+# set to "dev" so that analytics and adds won't show
+# show_google_ads and ga.enable are ignored when env is "dev"
+env: dev
+show_google_ads: false
+
+# ----------------
+# Google Analytics
+ga:
+  enable: false
+  tracking_id: G-1111111111
+
+#kramdown:
+#  smart_quotes: ["apos", "apos", "quot", "quot"]
