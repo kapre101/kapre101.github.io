@@ -23,7 +23,7 @@ env: prod
 # ----------------
 # Google Analytics (V4)
 ga:
-  enable: false
+  enable: true
   tracking_id: G-1EG60WX50K
 
 show_google_ads: false
