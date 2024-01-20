@@ -7,7 +7,8 @@ function _stopJekyllMain()
   local jekyllPID
   local cmd
 
-  jekyllPID="$(lsof -i :$jekyll_port|grep -i ruby| awk '{print $2}')"
+  jekyllPID="$(lsof -i :$jekyll_port|grep -i ruby|awk '{print $2}'|awk '{print $1}')"
+
   #jekyllPID="$(pgrep jekyll)"
   [ "${jekyllPID}" = "" ] && {
     echo "Jekyll server already stopped."
