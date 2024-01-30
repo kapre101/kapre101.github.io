@@ -28,7 +28,7 @@
 <body>
 
 {% assign isArticlePage = true %}
-{% include share-scripts.html %}
+{% comment %}{% include share-scripts.html %}{% endcomment %}
 
 <header>
     <div class="logo-wrap">
@@ -43,24 +43,24 @@
     <nav>
         <ul></ul>
     </nav>
-    <section class="{{ page.section_style | default: 'article1' }}">
+    <section class="{{ page.section_style | default: '' }}">
         <h1 class="{{ page.title_style | default: 'title' }}">{{ page.title | default: ''}}</h1>
 
         {% comment %}<span style="float: right; font-size: smaller;">Last Update: {% last_modified_at %}</span><br/>{% endcomment %}
         {% if page.last_modified_at %}
-            <div style="clear: both">
-                <span style="float: left; font-size: x-small;"><b>Post Date:</b> {{ page.date | date_to_string }}</span>
-                <span style="float: right; font-size: x-small;"><b>Last Update:</b> {{ page.last_modified_at | date_to_string }}</span>
+            <div class="post-dates-wrap" style="clear: both">
+                <span class="post-date left"><b>Post Date:</b> {{ page.date | date_to_string }}</span>
+                <span class="post-date right"><b>Last Update:</b> {{ page.last_modified_at | date_to_string }}</span>
                 <div style="clear: both">&nbsp;</div>
             </div>
         {% else %}
             <div>
-                <span style="float: left; font-size: x-small;"><b>Post Date:</b> {{ page.date | date_to_string }}</span>
+                <span class="post-date left"><b>Post Date:</b> {{ page.date | date_to_string }}</span>
                 <div style="clear: both">&nbsp;</div>
             </div>
         {% endif %}
 
-        {% include share-page.html %}
+        {% comment %}{% include share-page.html %}{% endcomment%}
 
         {% if site.env != "dev" and site.show_google_ads %}
         <ins class="adsbygoogle"
@@ -80,7 +80,7 @@
         <div class="share-spt">&nbsp;</div>
         {% include share-page.html %}
 
-        {% if related == null or page.tags == null or page.tags.size > 0 %}
+        {% if page.related == null or page.tags == null or page.tags.size > 0 %}
             {% include related-by-tags.html page=page %}
         {% else %}
             {% include related.html page=page %}
